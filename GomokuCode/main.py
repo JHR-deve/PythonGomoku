@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication
+import tkinter as tk
 from window import GomokuWindow
 from game import Gomoku
 import sys
@@ -7,9 +7,9 @@ import sys
 def main():
     # g = Gomoku()
     # g.play()
-    app = QApplication(sys.argv)
-    ex = GomokuWindow()
-    sys.exit(app.exec_())
+    root = tk.Tk()
+    ex = GomokuWindow(root)
+    root.mainloop()
 
 
 if __name__ == '__main__':
